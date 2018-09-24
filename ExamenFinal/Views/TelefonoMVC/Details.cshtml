@@ -1,0 +1,58 @@
+﻿@model ExamenFinal.Models.Telefono
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Telefono</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color.colorcell)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color.colorcell)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ensamble.pais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ensamble.pais)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gama.gamacell)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gama.gamacell)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_telefono }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

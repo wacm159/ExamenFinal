@@ -1,0 +1,79 @@
+﻿@*@{
+        Layout = "~/Views/TelefonoMVC/Create.cshtml";
+    }
+    @{
+        ViewBag.Title = "Detalles";
+    }*@
+
+@model IEnumerable<ExamenFinal.Models.Telefono>
+
+    @{
+        ViewBag.Title = "Detalles";
+    }
+
+    <h2>Listado General de Telefonos</h2>
+
+    @*<p>
+            @Html.ActionLink("Create New", "Create")
+        </p>*@
+    <table class="table">
+        <tr>
+            <th>
+                <b>MARCA</b>
+                @*@Html.DisplayNameFor("nombre")*@
+            </th>
+            <th>
+                <b>PRECIO</b>
+                @*@Html.DisplayNameFor(model => model.precio)*@
+            </th>
+            <th>
+                <b>COLOR</b>
+                @*@Html.DisplayNameFor(model => model.Color.colorcell)*@
+            </th>
+            <th>
+                <b>ENSAMBLAJE</b>
+                @*@Html.DisplayNameFor(model => model.Ensamble.pais)*@
+            </th>
+            <th>
+                <b>GAMA</b>
+                @*@Html.DisplayNameFor(model => model.Gama.gamacell)*@
+            </th>
+            <th></th>
+        </tr>
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.marca)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.precio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color.colorcell)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ensamble.pais)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gama.gamacell)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.id_telefono }) |
+                    @*@Html.ActionLink("Details", "Details", new { id=item.id_telefono }) |*@
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.id_telefono })
+                    
+
+                </td>
+            </tr>
+
+        }
+
+
+    </table>
+
+    <div>
+    <a href="/Home/Index">REGRESAR</a>
+    </div>
