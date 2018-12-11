@@ -11,6 +11,7 @@ using ExamenFinal.Models;
 
 namespace ExamenFinal.Controllers
 {
+    [Authorize]
     public class TelefonoMVCController : Controller
     {
         private CellphoneEntities db = new CellphoneEntities();
